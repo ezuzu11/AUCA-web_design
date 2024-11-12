@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DENDEN GYM</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="first-page">
+      <div class="header">
+        <div class="nav-bar">
+          <div class="hamburger">&#9776;</div>
+
+          <ul>
+            <div class="drop-down">
+              <li><a href="#">Home</a></li>
+              <div class="drop-content">
+                <p>Ezana</p>
+              </div>
+            </div>
+
+            <div class="drop-down">
+              <li><a href="#">Membership Plan</a></li>
+              <div class="drop-content">
+                <p>Mussie</p>
+              </div>
+            </div>
+
+            <div class="drop-down">
+              <li><a href="#" style="margin-right: 100px">Contact</a></li>
+              <div class="drop-content">
+                <p>26339</p>
+              </div>
+            </div>
+          </ul>
+        </div>
+        <h2>DENDEN GYM</h2>
+      </div>
+      <div class="main">
+        <div class="info">
+          <h3>DENDEN GYM</h3>
+          <p>
+            A place to know yourself and gain health! <br />
+            A Win, Win Solution!
+          </p>
+          <button>Sign Up</button>
+        </div>
+
+        <div class="image">
+          <img src="./2.jpg" alt="Man lifting weight" />
+        </div>
+      </div>
+    </div>
+
+    <div class="second-page">
+      <div class="title">
+        <h3>Membership Plan</h3>
+      </div>
+
+      <div class="pricing-container">
+        <div class="pricing-plan">
+          <div class="plan-title">Bronze</div>
+          <div class="plan-price">$9.99/month</div>
+          <ul class="plan-features">
+            <li>✅ No personal Trainer</li>
+            <li>✅ 1 User</li>
+          </ul>
+          <button class="plan-button">Sign Up</button>
+        </div>
+
+        <div
+          class="pricing-plan"
+          style="background-color: #1f2937; color: whitesmoke"
+        >
+          <div class="plan-title">Silver</div>
+          <div class="plan-price">$19.99/month</div>
+          <ul class="plan-features">
+            <li>✅ With Personal Trainer</li>
+            <li>✅ 1 Users</li>
+          </ul>
+          <button class="plan-button">Sign Up</button>
+        </div>
+
+        <div class="pricing-plan">
+          <div class="plan-title">Golden</div>
+          <div class="plan-price">$39.99/month</div>
+          <ul class="plan-features">
+            <li>✅ With Personal Trainer</li>
+            <li>✅ 3 Users</li>
+          </ul>
+          <button class="plan-button">Sign Up</button>
+        </div>
+      </div>
+
+      <div class="motivational-page">
+        <p>
+          "Success isn’t always about greatness. It’s about consistency.
+          Consistent hard work leads to success. Greatness will come." <br />
+          <span>– Dwayne Johnson</span>
+        </p>
+      </div>
+    </div>
+
+    <div class="contact-page">
+      <p>
+        <span>Call to action! It's time!</span> <br />
+        sign up for the membership by clicking that button over there!
+      </p>
+      <button>Sign Up</button>
+    </div>
+
+    <footer>
+      <p>&copy; DENDEN GYM 2024</p>
+    </footer>
+
+    <script>
+      // JavaScript for toggling the menu
+      document
+        .querySelector(".hamburger")
+        .addEventListener("click", function () {
+          document.querySelector(".nav-bar").classList.toggle("active");
+        });
+    </script>
+  </body>
+</html>

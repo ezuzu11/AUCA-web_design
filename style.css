@@ -1,0 +1,308 @@
+
+.first-page{
+    background-color:#1F2937 ;
+    height: 100vh;
+}
+
+.nav-bar > ul {
+    margin: 0;
+    padding: 0;
+    display: inline;
+    float: right;
+
+}
+.nav-bar > ul > li {
+    list-style: none;
+    padding: 10px 20px;
+    float: right;
+    margin-top: 20px;
+    
+}
+.nav-bar > ul > li > a{
+    text-decoration: none;
+    color: whitesmoke;
+}
+/* ----- */
+.nav-bar > ul > .drop-down > li {
+    list-style: none;
+    padding: 10px 20px;
+    float: right;
+    margin-top: 20px;
+    
+}
+.nav-bar > ul > .drop-down > li > a{
+    text-decoration: none;
+    color: whitesmoke;
+}
+
+.header > h2 {
+    color: whitesmoke;
+    padding: 30px 100px 0px 100px;
+}
+
+.nav-bar > ul > .drop-down li:hover{
+    background-color: #3882F6;
+    border-radius: 5px;
+}
+.nav-bar > ul > .drop-down {
+    position: relative;
+    display: inline-block;
+
+}
+
+.drop-content {
+    display: none;
+    position:absolute;
+    left: 0;
+    top: 100%;
+    z-index: 1;
+    border-radius: 6px;
+    padding: 0px 18px 0px 18px;
+    /* additional */
+    transition: opacity 0.3s ease-in;
+    opacity: 0;
+}
+.nav-bar > ul > .drop-down:hover .drop-content{
+    display:block;
+    background-color: whitesmoke;
+    opacity: 1;
+}
+.drop-content > p {
+    color: #1F2937;
+    
+}
+
+.main {
+    margin: 200px 30px 20px 100px;
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+
+}
+.main > .info {
+    color: whitesmoke;
+    height: 400px;
+    width: 500px;
+}
+.main > .info > h3 {
+    font-size: 48px;
+    font-weight: bold;
+}
+.main > .info > p {
+    font-size: 24px;
+}
+.main > .info > button {
+    background-color:#3882F6 ;
+    color: whitesmoke;
+    border: none;
+    border-radius: 4px;
+    font-size: 18px;
+    padding: 12px 18px;
+}
+
+.main > .image > img {
+    height: 300px;
+    width: 600px;
+    float: right;
+    border-radius: 10px;
+}
+
+/* page 2*/
+.second-page > .title > h3 {
+    font-size: 58px;
+    text-align: center;
+    color: #1F2937;
+}
+
+.pricing-container {
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+    align-content: center;
+    align-items: flex-start;
+    justify-content: center;
+    height: 300px;
+  }
+
+.pricing-plan {
+    background-color: aliceblue;
+    gap: 20px;
+    flex: 1;
+    max-width: 400px;
+    text-align: center;
+    border-radius: 10px;
+    padding-bottom: 20px;
+}
+.plan-title {
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+.plan-price {
+    text-align: center;
+    font-size: 40px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+ul {
+    list-style: none;
+    text-align: left;
+}
+
+.plan-button {
+    background-color:#3882F6 ;
+    color: whitesmoke;
+    border: none;
+    border-radius: 4px;
+    padding: 4px 12px;
+}
+
+@media (max-width: 1250px) {
+    .pricing-container {
+      flex-direction: column;
+      height: 100%;
+    }
+}
+
+/* Mobile screen styles */
+@media (max-width: 600px) {
+    .nav-bar ul {
+        display: none; /* Hide navbar by default */
+        flex-direction: column;
+        background-color: #1f2937; /* Background for mobile menu */
+        position: absolute;
+        right: 0;
+        top: 50px;
+        width: 100%;
+    }
+
+    .nav-bar.active ul {
+        display: flex; /* Show navbar when active */
+    }
+
+    .hamburger {
+        display: block; /* Show hamburger icon on mobile */
+        font-size: 24px;
+        cursor: pointer;
+        color: whitesmoke;
+        margin: 10px 20px;
+    }
+
+    /* Dropdown content in mobile view */
+    .drop-content {
+        position: static; /* Stack dropdowns in mobile */
+        background-color: #234; /* Background for dropdown items */
+        width: 100%;
+    }
+
+    .drop-content p {
+        padding: 10px;
+    }
+}
+
+/* Show navbar normally on larger screens */
+@media (min-width: 601px) {
+    .nav-bar ul {
+        display: flex;
+    }
+
+    .hamburger {
+        display: none; /* Hide hamburger icon on larger screens */
+    }
+}
+
+
+.motivational-page{
+    background-color: #e5e7eb;
+    height: 100px;
+}
+.motivational-page > p {
+    color: #1F2937;
+    text-align: center;
+    padding: 30px;
+    font-size: 22px;
+    font-style: italic;
+}
+.motivational-page > p > span {
+    font-weight: bold;
+    text-align: right;
+}
+
+.contact-page{
+    background-color: #3882F6;
+    margin: 90px 90px 90px 150px;
+    display: flex;
+    gap: 100px;
+    max-width: 1000px;
+    border-radius: 10px;
+}
+.contact-page > p {
+    color: whitesmoke;
+    padding: 10px 100px;
+}
+.contact-page > button {
+    background-color:#3882F6 ;
+    color: whitesmoke;
+    border: 2px solid white;
+    border-radius: 3px;
+    margin: 30px 15px;
+}
+
+/* Small screen (mobile) adjustments */
+@media (max-width: 600px) {
+    .main {
+        flex-direction: column; /* Stack content vertically */
+        margin: 20px; /* Adjust margin */
+        gap: 20px;
+    }
+
+    .main > .info {
+        width: 100%; /* Full width on mobile */
+    }
+
+    .pricing-container {
+        flex-direction: column; /* Stack pricing plans */
+        gap: 20px;
+    }
+
+    /* Smaller font sizes for mobile */
+    .main > .info > h3 {
+        font-size: 32px;
+    }
+    .main > .info > p {
+        font-size: 18px;
+    }
+}
+
+/* Tablet adjustments */
+@media (min-width: 601px) and (max-width: 1024px) {
+    .main {
+        margin: 50px; /* Slightly larger margin for tablet */
+        gap: 30px;
+    }
+    .pricing-container {
+        flex-direction: row; /* Side-by-side on tablet */
+        gap: 20px;
+    }
+}
+
+/* Larger screens (laptops and desktops) */
+@media (min-width: 1025px) {
+    .main {
+        flex-direction: row; /* Horizontal layout */
+        margin: 100px;
+    }
+}
+
+
+footer{
+    display: block;
+    background-color: #1F2937;
+    height: 70px;
+}
+footer > p {
+    color: whitesmoke;
+    text-align: center;
+    padding: 25px 0px;
+}
