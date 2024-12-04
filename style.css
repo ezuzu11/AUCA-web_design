@@ -1,308 +1,298 @@
-
-.first-page{
-    background-color:#1F2937 ;
-    height: 100vh;
+/* Base styles */
+.first-page {
+    background-color: #1F2937;
+    min-height: 100vh;
+    width: 100%;
+    padding: 1rem;
 }
 
+/* Navigation styles */
 .nav-bar > ul {
     margin: 0;
     padding: 0;
-    display: inline;
-    float: right;
-
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-wrap: wrap;
 }
+
 .nav-bar > ul > li {
     list-style: none;
-    padding: 10px 20px;
-    float: right;
-    margin-top: 20px;
-    
+    padding: 0.5rem 1rem;
+    margin-top: 1rem;
 }
-.nav-bar > ul > li > a{
+
+.nav-bar > ul > li > a {
     text-decoration: none;
     color: whitesmoke;
 }
-/* ----- */
+
 .nav-bar > ul > .drop-down > li {
     list-style: none;
-    padding: 10px 20px;
-    float: right;
-    margin-top: 20px;
-    
+    padding: 0.5rem 1rem;
+    margin-top: 1rem;
 }
-.nav-bar > ul > .drop-down > li > a{
+
+.nav-bar > ul > .drop-down > li > a {
     text-decoration: none;
     color: whitesmoke;
 }
 
 .header > h2 {
     color: whitesmoke;
-    padding: 30px 100px 0px 100px;
+    padding: 1.5rem 5% 0;
 }
 
-.nav-bar > ul > .drop-down li:hover{
+.nav-bar > ul > .drop-down li:hover {
     background-color: #3882F6;
     border-radius: 5px;
 }
+
 .nav-bar > ul > .drop-down {
     position: relative;
     display: inline-block;
-
 }
 
 .drop-content {
     display: none;
-    position:absolute;
+    position: absolute;
     left: 0;
     top: 100%;
     z-index: 1;
     border-radius: 6px;
-    padding: 0px 18px 0px 18px;
-    /* additional */
+    padding: 0 1rem;
     transition: opacity 0.3s ease-in;
     opacity: 0;
-}
-.nav-bar > ul > .drop-down:hover .drop-content{
-    display:block;
     background-color: whitesmoke;
+}
+
+.nav-bar > ul > .drop-down:hover .drop-content {
+    display: block;
     opacity: 1;
 }
+
 .drop-content > p {
     color: #1F2937;
-    
 }
 
+/* Main content styles */
 .main {
-    margin: 200px 30px 20px 100px;
+    margin: 2rem auto;
+    max-width: 1200px;
+    padding: 0 1rem;
     display: flex;
-    flex-direction: row;
-    gap: 50px;
-
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
 }
+
 .main > .info {
     color: whitesmoke;
-    height: 400px;
-    width: 500px;
+    flex: 1;
+    min-width: 300px;
+    max-width: 500px;
 }
+
 .main > .info > h3 {
-    font-size: 48px;
+    font-size: clamp(2rem, 5vw, 3rem);
     font-weight: bold;
 }
+
 .main > .info > p {
-    font-size: 24px;
+    font-size: clamp(1rem, 3vw, 1.5rem);
 }
+
 .main > .info > button {
-    background-color:#3882F6 ;
+    background-color: #3882F6;
     color: whitesmoke;
     border: none;
     border-radius: 4px;
-    font-size: 18px;
-    padding: 12px 18px;
+    font-size: clamp(1rem, 2vw, 1.125rem);
+    padding: 0.75rem 1.125rem;
+    cursor: pointer;
 }
 
 .main > .image > img {
-    height: 300px;
-    width: 600px;
-    float: right;
+    width: 100%;
+    max-width: 600px;
+    height: auto;
     border-radius: 10px;
+    object-fit: cover;
 }
 
-/* page 2*/
+/* Second page styles */
 .second-page > .title > h3 {
-    font-size: 58px;
+    font-size: clamp(2rem, 6vw, 3.625rem);
     text-align: center;
     color: #1F2937;
+    padding: 1rem;
 }
 
 .pricing-container {
     display: flex;
-    flex-direction: row;
-    gap: 50px;
-    align-content: center;
-    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 2rem;
     justify-content: center;
-    height: 300px;
-  }
+    padding: 2rem;
+    width: 100%;
+}
 
 .pricing-plan {
     background-color: aliceblue;
-    gap: 20px;
     flex: 1;
+    min-width: 280px;
     max-width: 400px;
     text-align: center;
     border-radius: 10px;
-    padding-bottom: 20px;
+    padding: 1.5rem;
 }
+
 .plan-title {
-    text-align: center;
-    font-size: 24px;
+    font-size: clamp(1.25rem, 3vw, 1.5rem);
     font-weight: bold;
-    margin-top: 10px;
+    margin-bottom: 1rem;
 }
+
 .plan-price {
-    text-align: center;
-    font-size: 40px;
+    font-size: clamp(1.5rem, 4vw, 2.5rem);
     font-weight: bold;
-    margin-top: 10px;
+    margin-bottom: 1rem;
 }
+
 ul {
     list-style: none;
     text-align: left;
+    padding: 0 1rem;
 }
 
 .plan-button {
-    background-color:#3882F6 ;
+    background-color: #3882F6;
     color: whitesmoke;
     border: none;
     border-radius: 4px;
-    padding: 4px 12px;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
 }
 
-@media (max-width: 1250px) {
-    .pricing-container {
-      flex-direction: column;
-      height: 100%;
-    }
-}
-
-/* Mobile screen styles */
-@media (max-width: 600px) {
-    .nav-bar ul {
-        display: none; /* Hide navbar by default */
-        flex-direction: column;
-        background-color: #1f2937; /* Background for mobile menu */
-        position: absolute;
-        right: 0;
-        top: 50px;
-        width: 100%;
-    }
-
-    .nav-bar.active ul {
-        display: flex; /* Show navbar when active */
-    }
-
-    .hamburger {
-        display: block; /* Show hamburger icon on mobile */
-        font-size: 24px;
-        cursor: pointer;
-        color: whitesmoke;
-        margin: 10px 20px;
-    }
-
-    /* Dropdown content in mobile view */
-    .drop-content {
-        position: static; /* Stack dropdowns in mobile */
-        background-color: #234; /* Background for dropdown items */
-        width: 100%;
-    }
-
-    .drop-content p {
-        padding: 10px;
-    }
-}
-
-/* Show navbar normally on larger screens */
-@media (min-width: 601px) {
-    .nav-bar ul {
-        display: flex;
-    }
-
-    .hamburger {
-        display: none; /* Hide hamburger icon on larger screens */
-    }
-}
-
-
-.motivational-page{
+/* Motivational page styles */
+.motivational-page {
     background-color: #e5e7eb;
-    height: 100px;
+    padding: 2rem 1rem;
 }
+
 .motivational-page > p {
     color: #1F2937;
     text-align: center;
-    padding: 30px;
-    font-size: 22px;
+    font-size: clamp(1rem, 3vw, 1.375rem);
     font-style: italic;
-}
-.motivational-page > p > span {
-    font-weight: bold;
-    text-align: right;
+    max-width: 800px;
+    margin: 0 auto;
 }
 
-.contact-page{
+.motivational-page > p > span {
+    font-weight: bold;
+    display: block;
+    text-align: right;
+    margin-top: 1rem;
+}
+
+/* Contact page styles */
+.contact-page {
     background-color: #3882F6;
-    margin: 90px 90px 90px 150px;
+    margin: 2rem auto;
+    padding: 2rem;
     display: flex;
-    gap: 100px;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: space-between;
+    align-items: center;
     max-width: 1000px;
     border-radius: 10px;
 }
+
 .contact-page > p {
     color: whitesmoke;
-    padding: 10px 100px;
+    flex: 1;
+    min-width: 280px;
 }
+
 .contact-page > button {
-    background-color:#3882F6 ;
+    background-color: #3882F6;
     color: whitesmoke;
     border: 2px solid white;
     border-radius: 3px;
-    margin: 30px 15px;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
 }
 
-/* Small screen (mobile) adjustments */
-@media (max-width: 600px) {
-    .main {
-        flex-direction: column; /* Stack content vertically */
-        margin: 20px; /* Adjust margin */
-        gap: 20px;
-    }
-
-    .main > .info {
-        width: 100%; /* Full width on mobile */
-    }
-
-    .pricing-container {
-        flex-direction: column; /* Stack pricing plans */
-        gap: 20px;
-    }
-
-    /* Smaller font sizes for mobile */
-    .main > .info > h3 {
-        font-size: 32px;
-    }
-    .main > .info > p {
-        font-size: 18px;
-    }
-}
-
-/* Tablet adjustments */
-@media (min-width: 601px) and (max-width: 1024px) {
-    .main {
-        margin: 50px; /* Slightly larger margin for tablet */
-        gap: 30px;
-    }
-    .pricing-container {
-        flex-direction: row; /* Side-by-side on tablet */
-        gap: 20px;
-    }
-}
-
-/* Larger screens (laptops and desktops) */
-@media (min-width: 1025px) {
-    .main {
-        flex-direction: row; /* Horizontal layout */
-        margin: 100px;
-    }
-}
-
-
-footer{
-    display: block;
+/* Footer styles */
+footer {
     background-color: #1F2937;
-    height: 70px;
+    padding: 1.5rem;
 }
+
 footer > p {
     color: whitesmoke;
     text-align: center;
-    padding: 25px 0px;
+    margin: 0;
+}
+
+/* Mobile navigation styles */
+.hamburger {
+    display: none;
+    cursor: pointer;
+    font-size: 1.5rem;
+    color: whitesmoke;
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+}
+
+.nav-menu {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+@media (max-width: 768px) {
+    .nav-bar ul {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .nav-bar > ul > .drop-down {
+        width: 100%;
+    }
+
+    .drop-content {
+        position: static;
+        width: 100%;
+        margin-top: 0.5rem;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .nav-menu {
+        display: none;
+        width: 100%;
+        background-color: #1F2937;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        padding: 1rem;
+    }
+
+    .nav-menu.active {
+        display: block;
+    }
+}
+
+/* Ensure hamburger menu works properly */
+@media (min-width: 769px) {
+    .hamburger {
+        display: none;
+    }
 }
